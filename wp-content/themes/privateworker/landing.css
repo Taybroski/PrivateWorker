@@ -1,0 +1,72 @@
+
+
+/* 
+font-family: 'Montserrat', sans-serif;
+customize: light 200, regular 400
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
+
+
+.landing_container { /* Contains entire page. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.title_container { /* Main title container */
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto 0;
+    width: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.main_title { /* Main title text */
+    display: flex;
+    align-self: flex-end;
+    font-size: 2em;
+}
+.under_title { /* Text below main title */
+    align-self: flex-end;
+    font-weight: 200;
+    font-style: unset;
+    font-size: 1.4em;
+}
+.adspace {
+    height: 5em;
+    width: 100%;
+}
+.button_container { /* Contains main buttons */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 65%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+.button_box { /* Box that contains button text $landing_msg0/1 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20em;
+    height: 10em;
+    padding: 1.4em;
+    border: 2px solid #000;
+}
+.landing_favicon { /* Icon template styling */
+    display: flex;
+    width: 60px;
+    height: 60px;    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lf_0 { /* Looking for work icon */
+    background-image: url(images/car-ramp-icon.png);
+}
+.lf_1 { /* Need something fixed icon */
+    background-image: url(images/crashed-car-icon.png);
+}

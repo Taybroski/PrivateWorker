@@ -1,0 +1,65 @@
+/*
+Theme Name: PrivateWorker
+Text Domain: privateworker
+Theme URI: http://taybroski.com/privateworker
+Author: Taybroski
+Description: Custom theme for private working application
+Version: 0.1 Alpha
+*/
+
+/*
+font-family: 'Ubuntu', sans-serif;
+customize: light 300, regular 400, medium 500
+*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500');
+
+
+html, body, div, nav, footer,
+p, a, h1, h2, h3, h4, h5, h6, ul, li {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+
+
+nav { /* NAV styling */
+	display: flex;
+	font-family: 'Ubuntu', sans-serif;
+	width: 100%;
+	height: 5em;
+	margin: 0 auto;
+	padding: 0 0 0.6em 0;
+	border-bottom: 4px solid black;
+}
+.nav_container {
+	width: 65%;
+	margin: 0 auto;
+	align-self: flex-end;
+}
+.nav_links {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	text-transform: capitalize;
+}
+nav ul {
+	flex-direction: row;
+	width: 100%;
+}
+
+
+
+footer {
+	border-top: 4px solid black;
+}
+.footer_txt
+{
+	text-align: center;
+}
+
