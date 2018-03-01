@@ -13,7 +13,7 @@
 				$cat = get_the_category();
 				$dPost = get_the_date();
 				$tPost = get_the_time();
-				$spec = get_field('jobs');		
+				$spec = get_fields();		
 		
 				echo "<div class='listings_main'>";
 					echo "<div class='listings_upper'>";
@@ -30,7 +30,7 @@
 								foreach ( $cat as $c ) 
 								{
 									echo "<li><a href='" . get_category_link($c->term_id) . "'>" . '| ' . $c->name . "</a></li>";
-								}
+								} // end foreach
 							echo "</ul></div>";
 							
 							echo "<div class='bullets_container'><ul class='listings_options'>";
@@ -38,17 +38,12 @@
 								echo "<li>" . the_terms($post->ID, 'vehicletype') . "</li>";
 							echo "</div></ul>";
 
-							if($spec)
-							{
+							if($spec) {
 								echo '<ul>';
 									foreach($spec as $s)
-									{
-										echo '<li>' . $s . '</li>';
-									}
-
+									{ echo '<li>' . $s->label . $s . '</li>';	}
 								echo '</ul>';
-							}
-
+							} // end if
 
 						echo "</div>";
 					echo "</div>";
@@ -56,6 +51,8 @@
 					echo "<div class='listings_lower'>";
 						the_content();
 					echo "</div>";
+				
+							prePrint($spec);
 					
 				echo "</div>";			
 			} // end if
