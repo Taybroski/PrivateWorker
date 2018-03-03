@@ -13,8 +13,8 @@
 				$cat = get_the_category();
 				$dPost = get_the_date();
 				$tPost = get_the_time();
-				$spec = get_fields();		
-		
+				$spec = get_fields();
+						
 				echo "<div class='listings_main'>";
 					echo "<div class='listings_upper'>";
 
@@ -38,10 +38,10 @@
 								echo "<li>" . the_terms($post->ID, 'vehicletype') . "</li>";
 							echo "</div></ul>";
 
-							if($spec) {
+							if($spec) { // Prints out fields
 								echo '<ul>';
 									foreach($spec as $s)
-									{ echo '<li>' . $s->label . $s . '</li>';	}
+									{ echo "<li>" . $s->post_name . $s . "</li>";	}
 								echo '</ul>';
 							} // end if
 
@@ -51,8 +51,6 @@
 					echo "<div class='listings_lower'>";
 						the_content();
 					echo "</div>";
-				
-							prePrint($spec);
 					
 				echo "</div>";			
 			} // end if

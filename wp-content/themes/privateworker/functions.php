@@ -16,9 +16,5 @@
 	function prePrint($data) {
 		echo "<pre>" . print_r($data, 1) . "</pre>";
 	}
-
-	function getTerms($post) {
-		
-	}
-
+	
 ?>
