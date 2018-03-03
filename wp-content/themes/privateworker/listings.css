@@ -60,6 +60,9 @@ ul.listings_cats li {
   display: flex;
   flex-direction: column;
 }
-.listings_options {
-  justify-content: space-between;
+.listings_options li {
+  display: inline;
+}
+.listings_options li::after {
+  padding-right: 5px;
 }
