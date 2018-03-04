@@ -24,48 +24,53 @@
 				$asp		= get_field('aspiration');
 				$email	= get_field('email');
 				$tel		= get_field('phone');
+	?>
 						
-				echo "<div class='listings_main'>";
-					echo "<div class='listings_upper'>";
+	<div class='listings_main'>
+		<div class='listings_upper'>
 
-						echo "<div class='listings_image'></div>"; // Post image
+			<div class='listings_image'></div> <!-- Post image -->
 
-						echo "<div class='listings_detail'>";
-							echo "<div class='listings_title'>";
-								echo "<h1><a href='" . $link . "'>" . get_the_title() . "</a></h1>";
-								echo "<p>Posted on {$dPost} at {$tPost} by {$author}</p>";
-							echo "</div>";
+			<div class='listings_detail'>
+				<div class='listings_title'>
+					<?php
+						echo "<h1><a href='" . $link . "'>" . get_the_title() . "</a></h1>";
+						echo "<p>Posted on {$dPost} at {$tPost} by {$author}</p>";
+					?>
+				</div>
 
-							echo "<div><ul class='listings_cats'>"; // Prints out categories in a list
-								foreach ($cat as $c) {
-									echo "<li><a href='" . get_category_link($c->term_id) . "'>" . '| ' . $c->name . "</a></li>";
-								} // end foreach
-							echo "</ul></div>";
-	
-	?>
-<?php 
-							echo "<div class='bullets_container'><ul class='listings_options'>";
-								foreach ($vMake as $m) {
-									echo "<li>" . $m . "</li>";
-								} // end foreach
-								foreach ($vType as $t) {
-									echo "<li>" . $t . "</li>";
-								} // end foreach
-							echo "</ul></div>";
-							
+				<div>
+					<ul class='listings_cats'> 
+						<?php 
+							foreach ($cat as $c) { // Prints out categories in a list
+								echo "<li><a href='" . get_category_link($c->term_id) . "'>" . '| ' . $c->name . "</a></li>";
+							} // end foreach
+						?>
+					</ul>
+				</div>
+		
+				<div class="bullets_container">
+					<ul class="listings_options">
+						<?php
+							foreach ($vMake as $m) {
+								echo "<li>" . $m . "</li>";
+							} // end foreach
+							foreach ($vType as $t) {
+								echo "<li>" . $t . "</li>";
+							} // end foreach
+						?>
+					</ul>
+				</div> <!-- End bullets container -->					
+			</div> <!-- End listing detail -->
+		</div> <!-- End listing upper -->
 
-						echo "</div>";
-					echo "</div>";
-
-					echo "<div class='listings_lower'>";
-						the_content(); // Post description
-					echo "</div>";
+		<div class='listings_lower'>
+			<?php the_content(); ?>
+		</div>
 					
-				echo "</div>";			
-			} // end if
-		} // end while
+	</div> <!-- End listing main -->
+	<?php 		
+			} // end while
+		} // end if
+		get_footer(); 
 	?>
-</div>
-<?php
-	get_footer();
-?>
