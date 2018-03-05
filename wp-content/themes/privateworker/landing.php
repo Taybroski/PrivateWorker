@@ -5,6 +5,7 @@
 	$under_title = "jersey";
 	$landing_msg0 = "looking for work?";
 	$landing_msg1 = "need something fixed?";
+	
 ?>
 
 <container class="landing_container">
