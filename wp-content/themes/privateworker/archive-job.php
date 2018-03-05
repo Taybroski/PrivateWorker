@@ -51,16 +51,25 @@
 		
 				<div class="bullets_container">
 					<ul class="listings_options">
-						<?php
-							foreach ($vMake as $m) {
-								echo "<li>" . $m . "</li>";
-							} // end foreach
-							foreach ($vType as $t) {
-								echo "<li>" . $t . "</li>";
-							} // end foreach
-						?>
+						<li>
+							<?php
+								foreach ($vMake as $m) 
+								{	echo $m; } 
+							?>
+						</li>
+						<li>
+							<?php
+								foreach ($vType as $t) 
+								{	echo $t; } 
+							?>
+						</li>
 					</ul>
-				</div> <!-- End bullets container -->					
+				</div>
+
+				<div class="fields">
+						
+				</div>
+
 			</div> <!-- End listing detail -->
 		</div> <!-- End listing upper -->
 
